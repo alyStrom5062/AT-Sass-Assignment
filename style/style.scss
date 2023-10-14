@@ -1,0 +1,82 @@
+@import "./variables";
+
+@mixin padding-margin {
+    margin: 40px;
+    padding: 10px;
+}
+
+@mixin rid-margin-vert {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin a-generic {
+    text-decoration: none;
+    color: $powder;
+}
+
+@mixin p-generic {
+    text-align: left;
+    font-size: 24px;
+    margin: 20px 50px;
+}
+
+body {
+    font-family: $def-font;
+    text-align: center;
+    color: $deepsea;
+    background-color: $cream;
+}
+
+header {
+    color: $salmon;
+    background-color: $deepsea;
+    text-align: left;
+    h1 {
+        font-family: $title-font;
+        font-size: 5em;
+        @include padding-margin;
+        margin-bottom: 0;
+    }
+    nav {
+        display: flex;
+        flex-wrap: row;
+        @include padding-margin;
+        @include rid-margin-vert;
+    }
+    a {
+        font-family: $link-font;
+        align-items: center;
+        @include a-generic;
+        font-size: 3em;
+        padding: 0 30px 15px 30px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+main {
+    @include p-generic;
+    h4 {
+        font-weight: light;
+        font-style: italic;
+        font-size: .95em;
+    }
+    div:nth-child(even) {
+            text-align: right;
+        }
+    h3 {
+        @include rid-margin-vert;
+        font-size: 2em;
+    }
+}
+
+footer {
+    font-size: 22px;
+    font-style: italic;
+    p:first-of-type {
+        font-weight: bold;
+        margin-bottom: -20px;
+    }
+}
