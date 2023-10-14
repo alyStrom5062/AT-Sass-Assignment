@@ -1,0 +1,20 @@
+@mixin padding-margin {
+    margin: 40px;
+    padding: 10px;
+}
+
+@mixin rid-margin-vert {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@mixin a-generic {
+    text-decoration: none;
+    color: $powder;
+}
+
+@mixin p-generic {
+    text-align: left;
+    font-size: 24px;
+    margin: 20px 50px;
+}

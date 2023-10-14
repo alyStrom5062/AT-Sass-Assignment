@@ -1,0 +1,27 @@
+header {
+    color: $salmon;
+    background-color: $deepsea;
+    text-align: left;
+    h1 {
+        font-family: $title-font;
+        font-size: 5em;
+        @include padding-margin;
+        margin-bottom: 0;
+    }
+    nav {
+        display: flex;
+        flex-wrap: row;
+        @include padding-margin;
+        @include rid-margin-vert;
+    }
+    a {
+        font-family: $link-font;
+        align-items: center;
+        @include a-generic;
+        font-size: 3em;
+        padding: 0 30px 15px 30px;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
